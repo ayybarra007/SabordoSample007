@@ -1,0 +1,17 @@
+body {
+  overflow-y: hidden;
+}
+
+#preloader {
+    background: rgb(255, 255, 255) url(me.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 3s ease-out;
+  }
+  
+  #preloader.hide {
+    opacity: 0;
+  }

@@ -1,0 +1,96 @@
+
+    .custom-card {
+      position: absolute;
+      top: 25%;
+      left: 8%;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      animation: bounce2 3.1s;
+     
+  }
+  
+.custom-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.custom-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-group {
+    position: relative;
+}
+
+.custom-form .custom-group label {
+    font-size: 14px;
+    color: rgb(99, 102, 102);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    transition: all .3s ease;
+}
+
+.custom-form .custom-group input,
+.custom-form .custom-group textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    outline: 0;
+    width: 93%;
+    background-color: transparent;
+}
+
+.custom-form .custom-group input:placeholder-shown + label,
+.custom-form .custom-group textarea:placeholder-shown + label {
+    top: 10px;
+    background-color: transparent;
+}
+
+.custom-form .custom-group input:focus,
+.custom-form .custom-group textarea:focus {
+    border-color: #3366cc;
+}
+
+.custom-form .custom-group input:focus + label,
+.custom-form .custom-group textarea:focus + label {
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    color: #3366cc;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.custom-form .custom-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.custom-form button {
+
+    background-color: rgb(35, 45, 63);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 45%;
+}
+
+.custom-form button:hover {
+    background-color: #000000;
+}
+
+

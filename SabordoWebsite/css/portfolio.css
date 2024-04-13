@@ -1,0 +1,124 @@
+.car {
+    position: absolute;
+    left: 70%;
+    top: 25%;
+    width: 390px;
+    height: 454px;
+    --border-radius: 15px;
+    --border-width: 4px;
+    padding: 1em 2em;
+    border: 0;
+    background-image: url(pic.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    border-radius: 15px;
+    animation: bounce 1.5s, floatImage 2s ease-in-out infinite;
+
+   }
+   
+   .car:after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #488cfb,
+           #29dbbc,
+           #ddf505,
+           #ff9f0e,
+           #e440bb,
+           #655adc,
+           #488cfb
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+  
+   }
+   
+   .car:hover::after {
+    animation-play-state: running;
+   }
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   @keyframes floatImage {
+   0% {
+transform: translateY(0);
+    }
+    50% {
+ transform: translateY(-24px);
+            }
+    100% {
+transform: translateY(0);
+        }
+   }
+   
+   .car,
+   .car::after {
+    box-sizing: border-box;
+   }
+   
+   .car:active {
+    --border-width: 5px;
+   }
+
+   .social-icon1,
+   .menu {
+     
+     display: flex;
+     justify-content: left;
+     align-items: left;
+     margin: 10px 0;
+     flex-wrap: wrap;
+     animation: bounce1 2.8s;
+   }
+   
+   .social-icon__item1,
+   .menu__item {
+     list-style: none;
+   }
+   
+   .social-icon__link1{
+     font-size: 2rem;
+     color: #ffffff;
+     margin: 0 10px;
+     display: inline-block;
+     transition: 0.5s;
+   }
+   .social-icon__link1:hover {
+     transform: translateY(-10px);
+   }
+   
+   .menu__link1 {
+     font-size: 1.2rem;
+     color: #ffffff;
+     margin: 0 10px;
+     display: inline-block;
+     transition: 0.5s;
+     text-decoration: none;
+     opacity: 0.75;
+     font-weight: 300;
+   }
+   
+   .menu__link1:hover {
+     opacity: 1;
+   }
+  
